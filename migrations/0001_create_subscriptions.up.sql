@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS subscriptions
         AND TO_DATE(start_date, 'MM-YYYY') IS NOT NULL
  ),
 	end_date VARCHAR(10) CHECK (
-        start_date ~ '^(0[1-9]|1[0-2])-[2-9][0-9]{3}$'
-        AND TO_DATE(start_date, 'MM-YYYY') IS NOT NULL
+        end_date ~ '^(0[1-9]|1[0-2])-[2-9][0-9]{3}$'
+        AND TO_DATE(end_date, 'MM-YYYY') IS NOT NULL
     )
 );
